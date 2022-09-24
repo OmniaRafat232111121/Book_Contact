@@ -43,7 +43,7 @@ const AddPost = ({ contacts, addContact }) => {
 
   return (
     <div className="container-fluid">
-      <h1 className="text-center text-dark py-3 display-2">Add Contact</h1>
+      <h1 className="text-center text-dark py-3 display-2">Add COntact</h1>
       <div className="row">
         <div className="col-md-6 p-5 mx-auto shadow">
           <form onSubmit={handleSubmit}>

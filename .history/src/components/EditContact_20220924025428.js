@@ -27,7 +27,7 @@ const EditContact = ({ contacts, updateContact }) => {
         ? contact
         : null
     );
-    const checkPhone = contacts.filter((contact) =>
+    const checkContactPhoneExists = contacts.filter((contact) =>
       contact.phone === phone && contact.id !== currentContact.id
         ? contact
         : null
@@ -39,7 +39,7 @@ const EditContact = ({ contacts, updateContact }) => {
     if (checkEmail.length > 0) {
       return toast.error("This email already exists!!");
     }
-    if (checkPhone.length > 0) {
+    if (checkContactPhoneExists.length > 0) {
       return toast.error("This phone number already exists!!");
     }
 

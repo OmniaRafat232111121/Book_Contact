@@ -27,7 +27,7 @@ const EditContact = ({ contacts, updateContact }) => {
         ? contact
         : null
     );
-    const checkPhone = contacts.filter((contact) =>
+    const checkPone = contacts.filter((contact) =>
       contact.phone === phone && contact.id !== currentContact.id
         ? contact
         : null

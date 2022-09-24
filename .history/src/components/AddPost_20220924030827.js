@@ -43,13 +43,13 @@ const AddPost = ({ contacts, addContact }) => {
 
   return (
     <div className="container-fluid">
-      <h1 className="text-center text-dark py-3 display-2">Add Contact</h1>
+      <h1 className="text-center text-dark py-3 display-2">Add Post</h1>
       <div className="row">
         <div className="col-md-6 p-5 mx-auto shadow">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <input
-                className="form-control mt-3"
+                className="form-control "
                 type="text"
                 placeholder="Full name"
                 value={name}
@@ -58,7 +58,7 @@ const AddPost = ({ contacts, addContact }) => {
             </div>
             <div className="form-group">
               <input
-                className="form-control mt-3"
+                className="form-control"
                 type="email"
                 placeholder="Email"
                 value={email}
@@ -67,7 +67,7 @@ const AddPost = ({ contacts, addContact }) => {
             </div>
             <div className="form-group">
               <input
-                className="form-control mt-3"
+                className="form-control"
                 type="number"
                 placeholder="Phone"
                 value={phone}
@@ -76,7 +76,7 @@ const AddPost = ({ contacts, addContact }) => {
             </div>
             <div className="form-group">
               <input
-                className="btn btn-block btn-dark mt-3"
+                className="btn btn-block btn-dark"
                 type="submit"
                 value="Add Student"
               />

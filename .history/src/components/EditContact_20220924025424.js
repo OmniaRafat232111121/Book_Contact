@@ -22,12 +22,12 @@ const EditContact = ({ contacts, updateContact }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const checkEmail = contacts.filter((contact) =>
+    const  = contacts.filter((contact) =>
       contact.email === email && contact.id !== currentContact.id
         ? contact
         : null
     );
-    const checkPhone = contacts.filter((contact) =>
+    const checkContactPhoneExists = contacts.filter((contact) =>
       contact.phone === phone && contact.id !== currentContact.id
         ? contact
         : null
@@ -36,10 +36,10 @@ const EditContact = ({ contacts, updateContact }) => {
     if (!email || !name || !phone) {
       return toast.warning("Please fill in all fields!!");
     }
-    if (checkEmail.length > 0) {
+    if (.length > 0) {
       return toast.error("This email already exists!!");
     }
-    if (checkPhone.length > 0) {
+    if (checkContactPhoneExists.length > 0) {
       return toast.error("This phone number already exists!!");
     }
 
