@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { useHistory, useParams } from "react-router";
 import { toast } from "react-toastify";
-import {useDi}
+import { useDispatch } from "react-redux";
 const EditContact = ({ contacts, updateContact }) => {
   const { id } = useParams();
   const history = useHistory();

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { useHistory, useParams } from "react-router";
 import { toast } from "react-toastify";
-import {useDi}
 const EditContact = ({ contacts, updateContact }) => {
   const { id } = useParams();
   const history = useHistory();
@@ -20,9 +19,9 @@ const EditContact = ({ contacts, updateContact }) => {
     setPhone(currentContact.phone);
   }
   }, [currentContact]);
-const checkEmail=contacts.find((contact)=> contact.id!==parseInt(id) && contact.email===email&&email)
-const checkPhone=contacts.find((contact)=>contact.id!==parseInt(id) && contact.phone===phone&&phone)
-const handleSubmit= (e) => {
+  const checkEmail=contacts.find((contact)=> contact.id!==parseInt(id) && contact.email===email&&email)
+  const checkPhone=contacts.find((contact)=>contact.id!==parseInt(id) && contact.phone===phone&&phone)
+  const handleSubmit = (e) => {
     e.preventDefault();
         if(!email||!phone||!name){
             return toast.warning("please fill all Fileds")
@@ -47,7 +46,7 @@ const handleSubmit= (e) => {
           toast.success("Contact updated successfully!!");
           history.push("/");
 
-      
+              }
 
   };
 
@@ -106,17 +105,9 @@ const handleSubmit= (e) => {
         </div>
       </div>
     </div>
-  );  
-          };          
-  const mapStateToProps = (state) => ({
-    contacts: state,
-  });
-  const mapDispatchToProps = (dispatch) => ({
-    updateContact: (data) => {
-      dispatch({ type: "UPDATE_CONTACT", payload: data });
-    },
-  });
-  
-  export default connect(mapStateToProps, mapDispatchToProps)(EditContact);
+  );
+        
 
 
+
+export default EditContact;

@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 import { useHistory, useParams } from "react-router";
 import { toast } from "react-toastify";
-import {useDi}
 const EditContact = ({ contacts, updateContact }) => {
   const { id } = useParams();
   const history = useHistory();
@@ -47,7 +46,7 @@ const handleSubmit= (e) => {
           toast.success("Contact updated successfully!!");
           history.push("/");
 
-      
+              }
 
   };
 
@@ -107,7 +106,7 @@ const handleSubmit= (e) => {
       </div>
     </div>
   );  
-          };          
+          }   
   const mapStateToProps = (state) => ({
     contacts: state,
   });
